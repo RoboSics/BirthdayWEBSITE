@@ -2,110 +2,85 @@
 <html>
 <head>
   <title>Happy Birthday Nafisa!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet"> 
   <style>
-    /* General Body Styles */
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #1a1a1a; /* Deep black background */
-      color: #ffffff; /* White text color */
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
       text-align: center;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
+      overflow: hidden; 
     }
-
-    /* Header and Subheader Styles */
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5em;
-      color: #c3aed6; /* Soft purple for the main header */
-      margin-top: 20px;
+      font-size: 4em;
+      color: #3e3e3e;
+      margin-bottom: 0;
     }
-
     h2 {
-      font-family: 'Poppins', sans-serif;
-      color: #a0c4ff; /* Light blue for subtitles */
-      margin: 20px;
-      line-height: 1.6em;
+      color: #555;
+      font-weight: 300;
     }
-
-    /* Timer Styles */
-    #timer {
-      background-color: #ffcad4; /* Pastel pink background for timer */
-      color: #1a1a1a; /* Black text for contrast */
-      padding: 15px 25px;
-      border-radius: 10px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.2em;
-      margin-top: 15px;
-      display: inline-block;
-    }
-
     /* Message Box Styles */
     .message-box {
-      background-color: #1a1a2e; /* Very dark purple */
-      color: #e0e1dd; /* Soft white text */
-      border: 2px solid #c3aed6; /* Soft purple border */
+      background-color: #fff;
+      border: 2px solid #d4af37;
       padding: 20px;
       margin: 20px auto;
-      width: 60%;
-      border-radius: 10px;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-      display: none; /* Messages are hidden initially */
-    }
-
-    /* Photo Gallery Styles */
-    #photo-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    #photo-gallery img {
-      width: 150px;
-      height: auto;
-      border: 2px solid #a0c4ff; /* Light blue border */
+      width: 50%;
       border-radius: 8px;
-      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      display: none; /* Messages are hidden initially */
+      font-size: 1.1em;
     }
-
+    /* Photo Gallery Styles */
+    #photo-gallery img {
+      width: 180px;
+      margin: 10px;
+      border-radius: 8px;
+      border: 2px solid #d4af37;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    }
     /* Button Styles */
     button {
-      background-color: #6a67ce; /* Purple button */
-      color: #ffffff; /* White text */
-      padding: 15px 30px;
+      background-color: #d4af37;
+      color: #fff;
+      padding: 15px 25px;
       border: none;
-      border-radius: 8px;
+      border-radius: 5px;
       cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.1em;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.2em;
       transition: background-color 0.3s ease;
     }
-
     button:hover {
-      background-color: #584b9f; /* Darker purple on hover */
+      background-color: #b39430;
     }
-
-    /* Confetti Canvas */
+    /* Timer Box Styles */
+    #timer {
+      background-color: #f4f4f4;
+      color: #555;
+      padding: 10px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    /* Confetti Canvas Styles */
     #confetti-canvas {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      z-index: -1; 
     }
   </style>
 </head>
 <body>
-
-  <audio autoplay loop>
-    <source src="Jonmodin.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+    <audio autoplay loop>
+        <source src="Jonmodin.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
   <!-- Confetti Canvas -->
   <canvas id="confetti-canvas"></canvas>
@@ -116,47 +91,45 @@
   <!-- Subtitle -->
   <h2>This is your second birthday since we started this beautiful journey together, and even though I'm halfway across the world, my heart is right there with you. I wish I could be by your side, celebrating with you, holding your hand, and watching your face light up with joy.</h2> 
 
-  <!-- Timer -->
-  <div id="timer">Loading time together...</div>
+  <!-- Timer Display -->
+  <h2>
+    <div id="timer"></div>
+  </h2>
 
   <!-- Photo Gallery -->
   <div id="photo-gallery">
-    <img src="image 1.jpg" alt="Memory 1">
-    <img src="image 2.jpg" alt="Memory 2">
-    <img src="image 3.jpg" alt="Memory 3">
-    <img src="image 4.jpg" alt="Memory 4">
-    <img src="image 5.jpg" alt="Memory 5">
-    <img src="image 6.jpg" alt="Memory 6">
+    <img src="Image 1.jpg">
+    <img src="Image 2.jpg">
+    <img src="Image 3.jpg">
+    <img src="Image 4.jpg">
+    <img src="Image 5.jpg">
+    <img src="Image 6.jpg">
   </div>
-  <p style="color: #a0c4ff;">Some of our many memories together</p>
+  <p>Some of our many to-come memories together</p>
 
   <!-- Message Boxes -->
   <div class="message-box"> 
-    <h2>Thank you for being with me! I know I’m far from perfect, but thank you for showing me what love truly means. You deserve the whole world and then some.</h2>
-    <p>Even though I can’t be there in person, know that you’re always in my heart. Here’s to you, to us, and to all the amazing memories yet to come.</p>
+    <h2>Thank you for being with me! I know I’m far from perfect, but thank you for sticking with me and showing me what love truly means. You deserve so much more.</h2>
+    <p>Even though I can’t be there in person, know that you’re always in my heart, and I’m so grateful for every moment we share. Here’s to you, to us, and to all the amazing memories yet to come.</p>
   </div>
-
   <div class="message-box"> 
-    <h2>You're the best girlfriend ever!!</h2>
+    <h2>Ur the best girlfriend ever!</h2>
     <p>Thank you for always putting effort into me and this relationship. Thanks for everything!</p>
   </div>
-
   <div class="message-box"> 
-    <h2>Thank you for always supporting me!</h2>
-    <p>I really love the way you support me in whatever I am doing and the way you reassure me when I overthink!</p>
+    <h2>Thank you for always reassuring and supporting me!</h2>
+    <p>I love the way you support me in whatever I’m doing and how you reassure me when I overthink!</p>
+  </div>
+  <div class="message-box"> 
+    <h2>You are a pure wife material!</h2>
+    <p>You’re so sweet and beautiful, and I love every moment with you!</p>
+  </div>
+  <div class="message-box"> 
+    <h2>I like you so so much</h2>
+    <p>I like you more than this website or anything else can convey. I hope we continue being together!</p>
   </div>
 
-  <div class="message-box"> 
-    <h2>You're pure wife material!</h2>
-    <p>You’re so sweet, beautiful, and amazing. I love every moment with you!</p>
-  </div>
-
-  <div class="message-box"> 
-    <h2>I like you so so so much</h2>
-    <p>More than this website or anything else can ever convey. I hope and pray that we’ll continue to be together always.</p>
-  </div>
-
-  <p style="color: #ffcad4;">Click "Celebrate" as many times as you want for confetti!</p>
+  <p>Feel free to click the celebrate button as many times as you want for confetti!</p>
   
   <!-- Celebrate Button -->
   <button onclick="celebrate()">Celebrate!</button> 
@@ -164,15 +137,13 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script> 
   <script>
-    // Function to show messages and trigger confetti
     function celebrate() {
       const messageBoxes = document.querySelectorAll('.message-box');
       messageBoxes.forEach(box => box.style.display = 'block');
-
       confetti({
         particleCount: 200,
         spread: 160,
-        origin: { y: 0.6 } 
+        origin: { y: 0.6 }
       });
     }
 
@@ -192,6 +163,7 @@
     }
 
     setInterval(updateTimer, 1000);
+
     document.body.style.overflowY = 'auto';
   </script>
 
